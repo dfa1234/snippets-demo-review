@@ -1,0 +1,113 @@
+body {
+  font-family: sans-serif;
+}
+
+.placeholder {
+  flex-basis: 100px;
+  width: 100px;
+  height: 100px;
+  background-color: #fff700;
+  border: rgba(0, 0, 0, 0.1) 3px solid;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px auto;
+  padding: 5px;
+}
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: lightgrey;
+  flex-wrap: wrap;
+}
+
+.relative {
+  position: relative;
+  top: 10px;
+  right: -10px;
+}
+
+.shadow {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+}
+
+.parent::before {
+  content: 'parent::before';
+  position: relative;
+  margin: auto 0;
+  background: #aef8ff;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.parent::after {
+  content: 'parent::after';
+  position: relative;
+  margin: auto 0;
+  background: #ffa6bb;
+  border: 1px solid gray;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.clear {
+  clear: right;
+  text-align: center;
+  background: rgba(200, 200, 200, 0.5);
+}
+
+.parent-float {
+  /* position: relative; */
+  /* height: auto; */
+  background: beige;
+  /* text-align: center; */
+}
+
+.sticky {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+.absolute {
+  position: absolute;
+  top: 300px;
+  right: 500px;
+  /*transform(50%,50%);*/
+}
+
+.buttons {
+  background: rgba(210, 0, 123, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 150px;
+  text-align: center;
+  padding: 1em;
+  margin: 1em;
+  color: white;
+  box-shadow: 1px 1px 1px 1px darkgrey;
+}
+
+.buttons:active {
+  box-shadow: 0 0 0 0 white;
+}
+
+.buttons:hover {
+  background: rgba(210, 0, 123, 0.98);
+}
+
+.borders {
+  content: 'Border Width-Style-Color';
+  transition: 1s;
+  border-width: 10px 20px 30px 40px;
+  border-style: solid;
+  border-color: red green gray yellow;
+  display: block;
+  width: 40px;
+  height: 40px;
+}
